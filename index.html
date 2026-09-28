@@ -734,6 +734,65 @@
       max-width: 430px;
     }
 
+    .btl-project {
+      display: block;
+      text-decoration: none;
+      color: var(--ink);
+      background: #f1eee6;
+      border: 1px solid rgba(48, 37, 30, 0.18);
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .btl-project::before {
+      inset: 7%;
+      border: 1px solid rgba(48, 37, 30, 0.24);
+      transform: rotate(-3deg);
+    }
+
+    .btl-project::after {
+      display: none;
+    }
+
+    .btl-project-content {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 22px;
+    }
+
+    .btl-project-name {
+      font-family: Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 3.8rem);
+      line-height: 0.88;
+      letter-spacing: -0.07em;
+    }
+
+    .btl-project-subtitle {
+      margin-top: 18px;
+      font-family: "DM Mono", monospace;
+      font-size: 0.58rem;
+      line-height: 1.5;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--soft-brown);
+    }
+
+    .btl-project-arrow {
+      position: absolute;
+      right: 18px;
+      bottom: 16px;
+      font-family: "DM Mono", monospace;
+      font-size: 0.58rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
     .project-number {
       margin-bottom: 12px;
     }
@@ -1231,11 +1290,29 @@
 
         <div class="project-list">
 
-          <!-- PROJECT 01 -->
+          <!-- PROJECT 01 / BETWEEN THE LINES -->
 
           <article class="project reveal-on-scroll">
 
-            <div class="project-image"></div>
+            <a
+              class="project-image btl-project"
+              href="https://between-the-lines-iota.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Between the Lines poetry platform"
+            >
+              <span class="btl-project-content">
+                <span class="btl-project-name">
+                  BETWEEN<br />THE LINES
+                </span>
+                <span class="btl-project-subtitle">
+                  Digital poetry platform
+                </span>
+              </span>
+              <span class="btl-project-arrow">
+                View project ↗
+              </span>
+            </a>
 
             <div class="project-info">
 
@@ -1244,17 +1321,19 @@
               </div>
 
               <h3 class="project-title">
-                Robo Coupler
+                Between the Lines
               </h3>
 
               <p class="project-description">
-                A futuristic interactive web experience built around
-                technology, motion, and human-machine connection.
+                A digital home for poetry, built with a focus on
+                writing, discovery, connection, and quiet interaction.
               </p>
 
             </div>
 
           </article>
+
+
 
           <!-- PROJECT 02 -->
 
